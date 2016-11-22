@@ -1,0 +1,15 @@
+Follow:
+https://github.com/BVLC/caffe/wiki/Ubuntu-16.04-or-15.10-Installation-Guide
+
+For matcaffe:
+add to .bashrc:
+
+export LD_LIBRARY_PATH=/opt/intel/mkl/lib/intel64:/usr/local/cuda/lib64
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+
+in /bin/glnxa64 make the following symlinks:
+(thanks: https://github.com/BVLC/caffe/issues/3934)
+
+libopencv_core.so.2.4 -> /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.9
+libopencv_highgui.so.2.4 -> /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.9
+libopencv_imgproc.so.2.4 -> /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.9
